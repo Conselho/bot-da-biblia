@@ -1,0 +1,477 @@
+{
+  "Mt": {
+    "nomes_alternativos": [
+      "Mateus",
+      "Evangelho de S. Mateus"
+    ],
+    "capitulos": [
+      25,
+      23,
+      17,
+      25,
+      48,
+      34,
+      29,
+      34,
+      38,
+      42,
+      30,
+      50,
+      58,
+      36,
+      39,
+      28,
+      27,
+      35,
+      30,
+      34,
+      46,
+      46,
+      39,
+      51,
+      46,
+      75,
+      66,
+      20
+    ]
+  },
+  "Mc": {
+    "nomes_alternativos": [
+      "Marcos",
+      "Evangelho de S. Marcos"
+    ],
+    "capitulos": [
+      45,
+      28,
+      35,
+      41,
+      43,
+      56,
+      37,
+      38,
+      50,
+      52,
+      33,
+      44,
+      37,
+      72,
+      47,
+      20
+    ]
+  },
+  "Lc": {
+    "nomes_alternativos": [
+      "Lucas",
+      "Evangelho de S. Lucas"
+    ],
+    "capitulos": [
+      80,
+      52,
+      38,
+      44,
+      39,
+      49,
+      50,
+      56,
+      62,
+      42,
+      54,
+      59,
+      35,
+      35,
+      32,
+      31,
+      37,
+      43,
+      48,
+      47,
+      38,
+      71,
+      56,
+      53
+    ]
+  },
+  "Jo": {
+    "nomes_alternativos": [
+      "João",
+      "Evangelho de S. João"
+    ],
+    "capitulos": [
+      51,
+      25,
+      36,
+      54,
+      47,
+      71,
+      53,
+      59,
+      41,
+      42,
+      57,
+      50,
+      38,
+      31,
+      27,
+      33,
+      26,
+      40,
+      42,
+      31,
+      25
+    ]
+  },
+  "Atos": {
+    "nomes_alternativos": [
+      "Atos",
+      "Atos dos Apóstolos"
+    ],
+    "capitulos": [
+      26,
+      47,
+      26,
+      37,
+      42,
+      15,
+      60,
+      40,
+      43,
+      48,
+      30,
+      25,
+      52,
+      28,
+      41,
+      40,
+      34,
+      28,
+      41,
+      38,
+      40,
+      30,
+      35,
+      27,
+      27,
+      32,
+      44,
+      31
+    ]
+  },
+  "Rm": {
+    "nomes_alternativos": [
+      "Romanos",
+      "Carta aos Romanos",
+      "Carta de S. Paulo aos Romanos"
+    ],
+    "capitulos": [
+      32,
+      29,
+      31,
+      25,
+      21,
+      23,
+      25,
+      39,
+      33,
+      21,
+      36,
+      21,
+      14,
+      26,
+      33,
+      25
+    ]
+  },
+  "1Co": {
+    "nomes_alternativos": [
+      "1 Coríntios",
+      "Primeira Carta de S. Paulo aos Coríntios"
+    ],
+    "capitulos": [
+      31,
+      16,
+      23,
+      21,
+      13,
+      20,
+      40,
+      13,
+      27,
+      33,
+      34,
+      31,
+      13,
+      40,
+      58,
+      24
+    ]
+  },
+  "2Co": {
+    "nomes_alternativos": [
+      "2 Coríntios",
+      "Segunda Carta de S. Paulo aos Coríntios"
+    ],
+    "capitulos": [
+      24,
+      17,
+      18,
+      18,
+      21,
+      18,
+      16,
+      24,
+      15,
+      18,
+      33,
+      21,
+      14
+    ]
+  },
+  "Gl": {
+    "nomes_alternativos": [
+      "Gálatas",
+      "Carta de S. Paulo aos Gálatas"
+    ],
+    "capitulos": [
+      24,
+      21,
+      29,
+      31,
+      26,
+      18
+    ]
+  },
+  "Ef": {
+    "nomes_alternativos": [
+      "Efésios",
+      "Carta de S. Paulo aos Efésios"
+    ],
+    "capitulos": [
+      23,
+      22,
+      21,
+      32,
+      33,
+      24
+    ]
+  },
+  "Fp": {
+    "nomes_alternativos": [
+      "Filipenses",
+      "Carta de S. Paulo aos Filipenses"
+    ],
+    "capitulos": [
+      30,
+      30,
+      21,
+      23
+    ]
+  },
+  "Cl": {
+    "nomes_alternativos": [
+      "Colossenses",
+      "Carta de S. Paulo aos Colossenses"
+    ],
+    "capitulos": [
+      29,
+      23,
+      25,
+      18
+    ]
+  },
+  "1Ts": {
+    "nomes_alternativos": [
+      "1 Tessalonicenses",
+      "Primeira Carta de S. Paulo aos Tessalonicenses"
+    ],
+    "capitulos": [
+      10,
+      20,
+      13,
+      18,
+      28
+    ]
+  },
+  "2Ts": {
+    "nomes_alternativos": [
+      "2 Tessalonicenses",
+      "Segunda Carta de S. Paulo aos Tessalonicenses"
+    ],
+    "capitulos": [
+      12,
+      17,
+      18
+    ]
+  },
+  "1Tm": {
+    "nomes_alternativos": [
+      "1 Timóteo",
+      "Primeira Carta de S. Paulo a Timóteo"
+    ],
+    "capitulos": [
+      20,
+      15,
+      16,
+      16,
+      25,
+      21
+    ]
+  },
+  "2Tm": {
+    "nomes_alternativos": [
+      "2 Timóteo",
+      "Segunda Carta de S. Paulo a Timóteo"
+    ],
+    "capitulos": [
+      18,
+      26,
+      17,
+      22
+    ]
+  },
+  "Tt": {
+    "nomes_alternativos": [
+      "Tito",
+      "Carta de S. Paulo a Tito"
+    ],
+    "capitulos": [
+      16,
+      15,
+      15
+    ]
+  },
+  "Fm": {
+    "nomes_alternativos": [
+      "Filemon",
+      "Carta de S. Paulo a Filemon"
+    ],
+    "capitulos": [
+      25
+    ]
+  },
+  "Hb": {
+    "nomes_alternativos": [
+      "Hebreus",
+      "Carta de S. Paulo aos Hebreus"
+    ],
+    "capitulos": [
+      14,
+      18,
+      19,
+      16,
+      14,
+      20,
+      28,
+      13,
+      28,
+      39,
+      40,
+      29,
+      25
+    ]
+  },
+  "Tg": {
+    "nomes_alternativos": [
+      "Tiago",
+      "Carta de S. Tiago"
+    ],
+    "capitulos": [
+      27,
+      26,
+      18,
+      17,
+      20
+    ]
+  },
+  "1Pe": {
+    "nomes_alternativos": [
+      "1 Pedro",
+      "Primeira Carta de S. Pedro"
+    ],
+    "capitulos": [
+      25,
+      25,
+      22,
+      19,
+      14
+    ]
+  },
+  "2Pe": {
+    "nomes_alternativos": [
+      "2 Pedro",
+      "Segunda Carta de S. Pedro"
+    ],
+    "capitulos": [
+      21,
+      22,
+      18
+    ]
+  },
+  "1Jo": {
+    "nomes_alternativos": [
+      "1 João",
+      "Primeira Epístola de S. João"
+    ],
+    "capitulos": [
+      10,
+      29,
+      24,
+      21,
+      21
+    ]
+  },
+  "2Jo": {
+    "nomes_alternativos": [
+      "2 João",
+      "Segunda Epístola de S. João"
+    ],
+    "capitulos": [
+      13
+    ]
+  },
+  "3Jo": {
+    "nomes_alternativos": [
+      "3 João",
+      "Terceira Epístola de S. João"
+    ],
+    "capitulos": [
+      14
+    ]
+  },
+  "Jd": {
+    "nomes_alternativos": [
+      "Epístola de Judas"
+    ],
+    "capitulos": [
+      25
+    ]
+  },
+  "Ap": {
+    "nomes_alternativos": [
+      "Apocalipse"
+    ],
+    "capitulos": [
+      20,
+      29,
+      22,
+      11,
+      14,
+      17,
+      17,
+      13,
+      21,
+      11,
+      19,
+      17,
+      18,
+      20,
+      8,
+      21,
+      18,
+      24,
+      21,
+      15,
+      27,
+      21
+    ]
+  }
+}
