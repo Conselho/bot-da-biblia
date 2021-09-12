@@ -1,7 +1,7 @@
 import requests as requests
+import os
 
-url = "API KEY URL will be here"
-
+url = os.environ.get('BOT_BIBLIA_API_TOKEN')
 
 def get_update_id(update):
     return update["update_id"]
