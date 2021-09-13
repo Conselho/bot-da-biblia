@@ -6,7 +6,9 @@ escreves uma referência bíblica e ele cita
 
 hehe
 
-## à malta do projeto ##
+### à malta do projeto ###
+
+**__para pôr o bot a correr é executar o ficheiro bot.py__**
 
 se a vossa shell for o fish, então para definir a environment variable têm de adicionar ao ficheiro ~/.config/fish/config.fish a linha:
 
