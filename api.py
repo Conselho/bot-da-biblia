@@ -1,7 +1,9 @@
-import requests as requests
 import os
 
-url = os.environ.get('BOT_BIBLIA_API_TOKEN')
+import requests as requests
+
+url = 'http://api.telegram.org/bot'+os.environ.get('BOT_BIBLIA_API_TOKEN')+'/'
+print('base url:', url)
 
 def get_update_id(update):
     return update["update_id"]
@@ -27,8 +29,10 @@ def last_update(last_solved_update_id):
 
 
 def send_message(chat_id, message_text):
-    params = {
-        "chat_id": chat_id,
-        "text": message_text
-    }
-    return requests.post(url + "sendMessage", data=params)
+    return requests.post(url+"sendMessage?chat_id="+str(chat_id)+"&text="+message_text)
+    # # não sei porque é que isto não dá... mas era lindo
+    # params = {
+    #     "chat_id": chat_id,
+    #     "text": message_text
+    # }
+    # return requests.post(url + "sendMessage", data=params)
