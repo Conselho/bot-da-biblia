@@ -28,7 +28,6 @@ def main():
         if api.get_update_id(update) != last_resolved_update_id:
             text = api.get_message_text(update)
             chat_id = api.get_chat_id(update)
-            print("mensagem recebida:", text, "\nchat id:", chat_id)
 
             # aqui cria-se condições para uma resposta possível do bot
             condition1 = True
@@ -39,10 +38,8 @@ def main():
             add_condition2("lançar" in text.lower())
 
             if condition1:
-                print("condição 1 cumprida\n")
                 api.send_message(chat_id, "Olá. Bem-vindo ao Bot da Bíblia. Para já sou só um dado. Podes mandar uma mensagem a dizer 'lançar' para veres quanto te calha")
             elif condition2:
-                print("condição 2 cumprida\n")
                 dado1 = random.randint(1, 6)
                 dado2 = random.randint(1, 6)
                 api.send_message(chat_id, "Calhou " + str(dado1) + " num dado e " + str(dado2) + " no outro, um total de " + str(dado1 + dado2) + "!")
