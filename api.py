@@ -2,7 +2,7 @@ import os
 
 import requests as requests
 
-url = 'http://api.telegram.org/bot'+os.environ.get('BOT_BIBLIA_API_TOKEN')+'/'
+url = 'http://api.telegram.org/bot'+str(os.environ.get('BOT_BIBLIA_API_TOKEN'))+'/'
 print('base url:', url)
 
 def get_update_id(update):
