@@ -29,10 +29,7 @@ def last_update(last_solved_update_id):
 
 
 def send_message(chat_id, message_text):
-    return requests.post(url+"sendMessage?chat_id="+str(chat_id)+"&text="+message_text)
-    # # não sei porque é que isto não dá... mas era lindo
-    # params = {
-    #     "chat_id": chat_id,
-    #     "text": message_text
-    # }
-    # return requests.post(url + "sendMessage", data=params)
+    params = { "chat_id": chat_id, "text": message_text }
+    return requests.post(url + "sendMessage", data=params)
+    # # se o que está em cima não funcionar, usar antes esta linha
+    # return requests.post(url+"sendMessage?chat_id="+str(chat_id)+"&text="+message_text)

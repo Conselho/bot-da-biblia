@@ -6,7 +6,7 @@ condition1 = True  # esta vai ser para comandos
 condition2 = True  # esta vai ser para referências encontradas
 condition3 = True  # esta vai ser para frases encontradas
 
-# permite que as threads sejam executadas por ordem
+# permite que as threads sejam executadas por ordem.
 # isto é porque o lock só permite que seja executada uma thread de cada vez,
 # e sempre que chega uma nova thread que tem de ficar à espera esta vai ser colocada em fila
 lock = threading.Lock()
