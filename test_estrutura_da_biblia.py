@@ -68,11 +68,76 @@ class TestEstrutura(unittest.TestCase):
         res = estrutura_da_biblia.get_referencia_from_str("carta de s. paulo aos colossenses 4, 12-18")
         self.assertEqual(estrutura_da_biblia.ReferenciaBiblica("Cl", 4, {12, 13, 14, 15, 16, 17, 18}), res)
         #   livro inválido
-        res = estrutura_da_biblia
+        res = estrutura_da_biblia.get_referencia_from_str("Falso 3, 1-2")
+        self.assertFalse(res)
+        # capítulo inválido 1
+        res = estrutura_da_biblia.get_referencia_from_str("1 Coríntios 19, 8-10")
+        self.assertFalse(res)
+        # capítulo inválido 2
+        res = estrutura_da_biblia.get_referencia_from_str("1Co 0, 1-2")
+        self.assertFalse(res)
+        # versículos inválidos
+        res = estrutura_da_biblia.get_referencia_from_str("1Coríntios 10, 30-35")
+        self.assertFalse(res)
         # <l> <c>, <v>.[...].<v_inicial>-<v_final>.[...]
-        # <l> <c>:<v>
-        # <l> <c>:<v_inicial>-<v_final>
-        # <l> <c>:<v>.[...].<v_inicial>-<v_final>.[...]
+        # situação válida
+        res = estrutura_da_biblia.get_referencia_from_str("1Co 7, 3.6.30-35.39-40.10")
+        self.assertEqual(estrutura_da_biblia.ReferenciaBiblica("1Co", 7, {3, 6, 30, 31, 32, 33, 34, 35, 39, 40, 10}),
+                         res)
+        # versículo inválido 1
+        res = estrutura_da_biblia.get_referencia_from_str("Tito 2, 18")
+        self.assertEqual(estrutura_da_biblia.ReferenciaBiblica("Tt", 2, set()), res)
+        # versículo inválido 2
+        res = estrutura_da_biblia.get_referencia_from_str("Tito 2, 4-10.15.18")
+        self.assertEqual(estrutura_da_biblia.ReferenciaBiblica("Tt", 2, {4, 5, 6, 7, 8, 9, 10, 15}), res)
+        # intervalo de versículos inválido
+        res = estrutura_da_biblia.get_referencia_from_str("Hebreus 13, 15.20-23.24-26")
+        self.assertEqual(res, estrutura_da_biblia.ReferenciaBiblica("Hb", 13, {15, 20, 21, 22, 23, 24, 25}))
+
+        # <l> <c>: <v>
+        #   situação válida
+        res = estrutura_da_biblia.get_referencia_from_str("1 Tessalonicenses 5: 10")
+        exp = estrutura_da_biblia.ReferenciaBiblica("1Ts", 5, {10})
+        self.assertEqual(res, exp)
+        #   livro inválido
+        res = estrutura_da_biblia.get_referencia_from_str("1 Falso 1: 3")
+        self.assertFalse(res)
+        #   capítulo inválido 1
+        res = estrutura_da_biblia.get_referencia_from_str("Romanos 20: 1")
+        self.assertFalse(res)
+        #   capítulo inválido 2
+        res = estrutura_da_biblia.get_referencia_from_str("Romanos -3: 3")
+        self.assertFalse(res)
+        # <l> <c>: <v_inicial>-<v_final>
+        #   situação válida
+        res = estrutura_da_biblia.get_referencia_from_str("carta de s. paulo aos colossenses 4: 12-18")
+        self.assertEqual(estrutura_da_biblia.ReferenciaBiblica("Cl", 4, {12, 13, 14, 15, 16, 17, 18}), res)
+        #   livro inválido
+        res = estrutura_da_biblia.get_referencia_from_str("Falso 3: 1-2")
+        self.assertFalse(res)
+        # capítulo inválido 1
+        res = estrutura_da_biblia.get_referencia_from_str("1 Coríntios 19: 8-10")
+        self.assertFalse(res)
+        # capítulo inválido 2
+        res = estrutura_da_biblia.get_referencia_from_str("1Co 0: 1-2")
+        self.assertFalse(res)
+        # versículos inválidos
+        res = estrutura_da_biblia.get_referencia_from_str("1Coríntios 10: 30-35")
+        self.assertFalse(res)
+        # <l> <c>: <v>.[...].<v_inicial>-<v_final>.[...]
+        # situação válida
+        res = estrutura_da_biblia.get_referencia_from_str("1Co 7: 3.6.30-35.39-40.10")
+        self.assertEqual(estrutura_da_biblia.ReferenciaBiblica("1Co", 7, {3, 6, 30, 31, 32, 33, 34, 35, 39, 40, 10}),
+                         res)
+        # versículo inválido 1
+        res = estrutura_da_biblia.get_referencia_from_str("Tito 2: 18")
+        self.assertEqual(estrutura_da_biblia.ReferenciaBiblica("Tt", 2, set()), res)
+        # versículo inválido 2
+        res = estrutura_da_biblia.get_referencia_from_str("Tito 2: 4-10.15.18")
+        self.assertEqual(estrutura_da_biblia.ReferenciaBiblica("Tt", 2, {4, 5, 6, 7, 8, 9, 10, 15}), res)
+        # intervalo de versículos inválido
+        res = estrutura_da_biblia.get_referencia_from_str("Hebreus 13: 15.20-23.24-26")
+        self.assertEqual(res, estrutura_da_biblia.ReferenciaBiblica("Hb", 13, {15, 20, 21, 22, 23, 24, 25}))
 
     @staticmethod
     def loop_keys_nomes_alternativos(action):

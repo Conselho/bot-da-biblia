@@ -184,7 +184,11 @@
   "1Co": {
     "nomes_alternativos": [
       "1 Coríntios",
-      "Primeira Carta de S. Paulo aos Coríntios"
+      "1Coríntios",
+      "Primeira Carta de S. Paulo aos Coríntios",
+      "Primeira Carta aos Coríntios",
+      "Primeira Epístola de S. Paulo aos Coríntios",
+      "Primeira Epístola aos Coríntios"
     ],
     "capitulos": [
       31,
@@ -331,7 +335,8 @@
   "Tt": {
     "nomes_alternativos": [
       "Tito",
-      "Carta de S. Paulo a Tito"
+      "Carta de S. Paulo a Tito",
+      "Carta a Tito"
     ],
     "capitulos": [
       16,
@@ -342,7 +347,8 @@
   "Fm": {
     "nomes_alternativos": [
       "Filemon",
-      "Carta de S. Paulo a Filemon"
+      "Carta de S. Paulo a Filemon",
+      "Carta a Filemon"
     ],
     "capitulos": [
       25
@@ -351,7 +357,8 @@
   "Hb": {
     "nomes_alternativos": [
       "Hebreus",
-      "Carta de S. Paulo aos Hebreus"
+      "Carta de S. Paulo aos Hebreus",
+      "Carta aos Hebreus"
     ],
     "capitulos": [
       14,
