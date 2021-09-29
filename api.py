@@ -35,4 +35,4 @@ def send_message(chat_id, message_text):
     # params = {"chat_id": chat_id, "text": message_text}
     # return requests.post(url + "sendMessage", data=params)
     # # se o que está em cima não funcionar, usar antes esta linha
-    return requests.post(url + "sendMessage?chat_id=" + str(chat_id) + "&text=" + message_text)
+    return requests.post(url + "sendMessage?chat_id=" + str(chat_id) + "&text=" + str(message_text))

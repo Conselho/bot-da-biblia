@@ -1,10 +1,7 @@
 import random
 import threading
-import api
 
-condition1 = True  # esta vai ser para comandos
-condition2 = True  # esta vai ser para referências encontradas
-condition3 = True  # esta vai ser para frases encontradas
+import api
 
 # permite que as threads sejam executadas por ordem.
 # isto é porque o lock só permite que seja executada uma thread de cada vez,
@@ -12,46 +9,36 @@ condition3 = True  # esta vai ser para frases encontradas
 lock = threading.Lock()
 
 
-def add_condition1(new_condition):
-    global condition1
-    condition1 = condition1 and new_condition
-
-
-def add_condition2(new_condition):
-    global condition2
-    condition2 = condition2 and new_condition
-
-
-def add_condition3(new_condition):
-    global condition3
-    condition3 = condition3 and new_condition
-
-
 def thread_func(update_):
     lock.acquire()
-    global condition1
-    global condition2
-
     text = api.get_message_text(update_)
     chat_id = api.get_chat_id(update_)
 
-    # aqui cria-se condições para uma resposta possível do bot
-    condition1 = True
-    add_condition1("olá" in text.lower())
-    add_condition1("bot" in text.lower())
-    # se nenhuma das acima for True, mas uma destas
-    condition2 = True
-    add_condition2("lançar" in text.lower())
-
-    if condition1:
-        api.send_message(chat_id, "Olá. Bem-vindo ao Bot da Bíblia. Para já sou só um dado. Podes mandar uma mensagem "
-                                  "a dizer 'lançar' para veres quanto te calha")
-    elif condition2:
+    word_list = text.strip().split(" ")
+    # # para testar se o bot está a funcionar
+    if "olá" in text.lower() and "bot" in text.lower():
+        api.send_message(chat_id, "Olá. Bem-vindo ao Bot da Bíblia. Para já sou só um dado e um reconhecedor de"
+                                  " referências bíblicas")
+        api.send_message(chat_id, "Podes mandar uma mensagem a dizer 'lançar' para veres quanto te calha, ou mandar "
+                                  "uma referência bíblica (para já, só se for Novo Testamento), que eu digo se existe "
+                                  "ou não.")
+    elif "lançar" in text.lower():
         dado1 = random.randint(1, 6)
         dado2 = random.randint(1, 6)
         api.send_message(chat_id, "Calhou " + str(dado1) + " num dado e " + str(dado2)
                          + " no outro, um total de " + str(dado1 + dado2) + "!")
         api.send_message(chat_id, "Foi sorte?")
+    elif len(word_list) < 20:
+        # se a mensagem for de 20 ou mais palavras não será analisada
+        for i in range(len(word_list) - 1):  # para cada palavra analisada
+            # são analisadas 10 palavras à sua frente
+            for k in range(2, 11):
+                possivel_ref = ""
+                for j in range(i, min(i + k, len(word_list) - 1)):
+                    possivel_ref = possivel_ref + " " + word_list[j]
+                possivel_ref.strip()
+                api.send_message(chat_id, possivel_ref)
+
     lock.release()
 
 
