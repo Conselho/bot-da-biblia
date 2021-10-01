@@ -1,4 +1,5 @@
 import unittest
+
 import estrutura_da_biblia
 
 

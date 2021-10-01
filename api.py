@@ -28,7 +28,10 @@ def last_update(last_solved_update_id):
 
     result = response["result"]  # result é uma lista de mensagens (updates)
     total_updates = len(result)
-    return result[total_updates - 1]
+    if total_updates > 0:
+        return result[total_updates - 1]
+    else:
+        return None
 
 
 def send_message(chat_id, message_text):

@@ -49,7 +49,7 @@ def thread_func(update_):
             ref = referencias_list[0]
             for i in range(1, len(referencias_list)):
                 if len(referencias_list[i].versiculos) > len(ref.versiculos):
-                    ref = referencias_list[i].versiculos
+                    ref = referencias_list[i]
             api.send_message(chat_id, str(ref))
 
     lock.release()
@@ -61,6 +61,7 @@ if __name__ == '__main__':
     last_resolved_update_id = api.get_update_id(update)
     while True:
         update = api.last_update(last_resolved_update_id)
+        # não se responde à última mensagem respondida
         if api.get_update_id(update) != last_resolved_update_id:
             thread = threading.Thread(target=thread_func, args=[update])
             last_resolved_update_id = update["update_id"]
